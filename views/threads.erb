@@ -1,0 +1,5 @@
+<% @threads.each do |thread| %>
+  <div class= "thread">
+  <h2><a href="threads/<%= thread["id"]%>"><%= " #{thread["topic"]}"%></a></h2>
+  </div>
+  <% end %>
