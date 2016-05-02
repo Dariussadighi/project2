@@ -1,7 +1,15 @@
-<div class="thread">
-<h2><%=" #{@thread["topic"]}"%></h2>
+  <div class="top">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/threads">Threads</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+  </div>
 
-<% @commentsInThread.each do |user| %>
-  <div class= "user">
-  <% end %>
+<form class="body" action="/comments" method="post">
+<label for="description">Comment: </label>
+  <textarea class="u-half-width" placeholder="Write your comment here." name="body"></textarea><br>
+  <input type="hidden" name="thread_id" value="<%= @thread_id %>" />
+  <input class="button-primary" type="submit" value="comment!" />
+</form>
 

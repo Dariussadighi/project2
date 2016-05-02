@@ -1,0 +1,11 @@
+.container {
+  margin-right: 0 auto;
+  margin-left: 0 auto;
+  text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+body

@@ -1,0 +1,32 @@
+<% @threads.each do |comment| %>
+  <ul class= "thread">
+  <h3><a href="threads/<%= thread["id"]%>"><%= " #{thread["topic"]}"%></a></h3>
+  </div>
+  <% end %>
+
+  <div class='box'>
+    <h4>Comments: </h4>
+      <% @comments.each do |comm| %>
+      <ul class='comments'>
+        <li><%= comm ["comment"] %>
+        <span class='name'>-<%= comm ["user_fname"] %></span></li>
+      </ul>
+      <% end %>
+      <div class='box'>
+        <h4>Add your review to this menu item: </h4>
+        <form class='comments' action='/comments' method='post'>
+          <!-- <label for='comment'>Comments: </label> -->
+          <textarea name='comment'></textarea>
+          <br />
+        <!--   <label for='restaurant_id'>Restaurant ID: </label> -->
+          <input name='thread_id' value='<%= @thread_id %>' type='text' />
+          <input type='submit' value='Submit' />
+          </form>
+        </div>
+    </div>
+
+<% @comments.each do |comment| %>
+  <ul class= "thread">
+  <li="threads/<%= comments["id"]%>"><%= " #{comments["body"]}"%></li="threads>
+  </
+  <% end %>

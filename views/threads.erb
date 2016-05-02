@@ -1,5 +1,29 @@
+  <div class="top">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/threads">Threads</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+  </div>
+  <h3>Create a New Thread</h3>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main-container">
+      <form class="post" action="/threads" method="post">
+        <label for="topic"></label>
+        <input name="topic" placeholder="Your password here." type="text" />
+        <br>
+        <input class="button-primary" input type="submit" value="Post" />
+      </form>
+    </div>
+  </body>
+
+</html>
+
 <% @threads.each do |thread| %>
   <div class= "thread">
-  <h2><a href="threads/<%= thread["id"]%>"><%= " #{thread["topic"]}"%></a></h2>
+  <h3><a href="threads/<%= thread["id"]%>"><%= " #{thread["topic"]}"%></a></h3>
   </div>
   <% end %>
+
