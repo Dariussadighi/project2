@@ -19,7 +19,7 @@ conn.exec("DROP TABLE IF EXISTS comments")
 conn.exec("CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     email VARCHAR NOT NULL,
-    password VARCHAR NOT NULL,
+    password VARCHAR NOT NULL
   )"
 )
 
@@ -33,7 +33,6 @@ conn.exec("CREATE TABLE threads(
 conn.exec("CREATE TABLE comments(
   id SERIAL PRIMARY KEY,
   body VARCHAR(255),
-  thread_id INTEGER REFERENCES threads(id),
-
+  thread_id INTEGER REFERENCES threads(id)
   )"
 )
