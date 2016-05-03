@@ -34,18 +34,6 @@ module Sinatra
       erb :contact
     end
 
-    # post '/contact' do
-    #   @email = params[:email]
-    #   @name = params[:name]
-    #   @message = params[:message]
-
-    #   conn.exec_params("INSERT INTO contact_data (name, email, message) VALUES ($1,$2,$3)", [@name, @email, @message])
-
-    #   @submitted = true
-
-    #   erb :contact
-    # end
-
     post "/login" do
       @email = params[:email]
       @password = params[:password]
